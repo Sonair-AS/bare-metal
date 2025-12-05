@@ -12,4 +12,10 @@ edition = "2018"
 readme = "README.md"
 
 [dependencies]
-critical-section = "1.0"
+critical-section = { git = "https://github.com/Sonair-AS/critical-section.git", branch = "certified_subset", version = "1.2.0" }
+
+
+[features]
+certified_subset = [
+    "critical-section/certified_subset",
+]
